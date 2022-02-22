@@ -10,7 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HCCStartUp">
         <activity
+            android:name=".AddTeamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PitchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartupRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

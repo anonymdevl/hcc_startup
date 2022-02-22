@@ -2,6 +2,7 @@ package com.example.hccstart_up;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this,DashboardActivity.class);
+                startActivity(i);
+
                 if(email.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     //correct
                     Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
