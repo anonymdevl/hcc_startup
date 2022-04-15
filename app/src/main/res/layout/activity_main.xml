@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bblock"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_margin="30dp"
-            android:src="@drawable/cepe" />
+            android:src="@drawable/splash" />
     </LinearLayout>
 
 
@@ -73,14 +73,32 @@
         android:text="LOGIN" />
 
     <TextView
-        android:id="@+id/forgot_pass"
+        android:id="@+id/tv_forgot_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/loginbtn"
-        android:text="Forgot Password?"
-        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="Forgot Password?"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_gotoreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/others"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:text="New user? Click here to register"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/others"
@@ -88,7 +106,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/social_icons"
         android:layout_centerHorizontal="true"
-        android:text="or sign in with" />
+        android:text="or sign in with"
+        android:textColor="@color/black" />
 
 
     <LinearLayout

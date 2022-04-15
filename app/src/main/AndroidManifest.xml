@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hccstart_up">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,10 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HCCStartUp">
         <activity
+            android:name=".PitchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatusActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddTeamActivity"
             android:exported="false" />
         <activity
-            android:name=".PitchActivity"
+            android:name=".LoadDirectoryFiles"
             android:exported="false" />
         <activity
             android:name=".StartupRegisterActivity"
@@ -29,7 +41,8 @@
             android:exported="false" />
         <activity
             android:name=".WelcomeActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
