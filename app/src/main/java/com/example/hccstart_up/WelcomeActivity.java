@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class WelcomeActivity extends AppCompatActivity {
-Button btn_login, btn_reg;
+Button btn_login, btn_reg, btn_dash;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,9 +16,10 @@ Button btn_login, btn_reg;
 
         btn_login = findViewById(R.id.btn_login_welcome);
         btn_reg = findViewById(R.id.btn_reg_welcome);
+
         btn_login.setOnClickListener(view -> {
 
-            Intent i = new Intent(WelcomeActivity.this, MainActivity.class);
+            Intent i = new Intent(WelcomeActivity.this, LoginActivity.class);
             startActivity(i);
         });
 

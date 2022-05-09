@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".MainActivity">
+    android:background="@drawable/background_whitewash"
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#81018786"
-        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
         android:hint="Password"
         android:inputType="textPassword"
@@ -71,6 +71,8 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/teal_200"
         android:text="LOGIN" />
+        <!--android:onClick="login"-->
+
 
     <TextView
         android:id="@+id/tv_forgot_pass"
@@ -84,10 +86,10 @@
         android:layout_marginBottom="20dp"
         android:clickable="true"
         android:text="Forgot Password?"
-        android:textColor="@color/white" />
+        android:textColor="@color/black" />
 
     <TextView
-        android:id="@+id/tv_gotoreg"
+        android:id="@+id/tv_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/others"
@@ -98,7 +100,9 @@
         android:layout_marginBottom="5dp"
         android:clickable="true"
         android:text="New user? Click here to register"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:onClick="register"
+       />
 
     <TextView
         android:id="@+id/others"

@@ -12,20 +12,28 @@
         <entry key="..\:/Users/IT Students/AndroidStudioProjects/HCCStartUp/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/HCCStartUp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/HCCStartUp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/drawable/blur.xml" value="0.1195" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/drawable/display_status.xml" value="0.104" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.1" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/drawable/splash_icon.xml" value="0.1195" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/drawable/splash_icon_2.xml" value="0.1" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/font/agartha.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_add_team.xml" value="0.14130434782608695" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_dashboard.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_dashboard.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_pitch.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_manage_team.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_pitch.xml" value="0.12" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_register.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_splashscreen.xml" value="0.10190217391304347" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_startup_details_1.xml" value="0.18432971014492755" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_startup_details_2.xml" value="0.18432971014492755" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_startup_register.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_status.xml" value="0.1" />
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_welcome.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_status.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/layout/activity_welcome.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/hccstart_up/app/src/main/res/xml/network_security_config.xml" value="0.2" />
       </map>
     </option>
   </component>

@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import java.io.File;
-
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
@@ -15,7 +13,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_splashscreen);
 
 
-        Intent intent = new Intent (SplashScreenActivity.this, MainActivity.class);
+        Intent intent = new Intent (SplashScreenActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 }

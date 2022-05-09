@@ -32,7 +32,7 @@ Button btn_reg_startup, btn_pitch, btn_addteam, btn_stat;
         switch (view.getId())
         {
             case R.id.btn_register_for_startup:
-                Intent i = new Intent(DashboardActivity.this,StartupRegisterActivity.class);
+                Intent i = new Intent(DashboardActivity.this, StartupDetails1Activity.class);
                 startActivity(i);
                 break;
             case R.id.btn_pitch_idea:
@@ -40,7 +40,7 @@ Button btn_reg_startup, btn_pitch, btn_addteam, btn_stat;
                 startActivity(intent);
                 break;
             case R.id.btn_add_team:
-                Intent intent2 = new Intent(DashboardActivity.this,AddTeamActivity.class);
+                Intent intent2 = new Intent(DashboardActivity.this, ManageTeamActivity.class);
                 startActivity(intent2);
                 break;
             case R.id.btn_status:

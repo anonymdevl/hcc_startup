@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_startup_reg"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".StartupDetails1Activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="About Your Startup: "
+        android:textSize="20dp"
+        android:layout_gravity="start"
+        />
+
+    <EditText
+        android:id="@+id/et_startup_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
+        android:background="#81000C0C"
+        android:hint="Startup Name"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+    <EditText
+        android:id="@+id/et_brief_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
+        android:background="#81000E0E"
+        android:hint="Brief Description"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+    <EditText
+        android:id="@+id/et_number_of_members"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#81000E0E"
+        android:hint="Number of Members"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="Team Member Names: "
+        android:textSize="20dp"
+        android:layout_gravity="start"
+        />
+
+    <EditText
+        android:id="@+id/et_member_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
+        android:background="#81000E0E"
+        android:hint="Member 1 Name"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+
+    <EditText
+        android:id="@+id/et_mn_2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
+        android:background="#81000E0E"
+        android:hint="Member 2 Name"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+    <EditText
+        android:id="@+id/et_mn_3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
+        android:background="#81000E0E"
+        android:hint="Member 3 Name"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+
+    <EditText
+        android:id="@+id/et_mn_4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        android:background="#81000E0E"
+        android:hint="Member 4 Name"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Next"
+            android:layout_gravity="end"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/purple_700"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

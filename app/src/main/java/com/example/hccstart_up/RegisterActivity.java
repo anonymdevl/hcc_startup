@@ -1,14 +1,16 @@
 package com.example.hccstart_up;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -18,168 +20,99 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class RegisterActivity extends AppCompatActivity {
-    EditText email, full_name,team_name,enter_password,confirm_password;
-    Button submit;
-    TextView already_Registered;
-
-    private static String URL_REGIST = "http://10.0.2.2/hccstartup/register.php";
+public class RegisterActivity extends AppCompatActivity implements  View.OnClickListener{
+    private EditText etName, et_team_name, etEmail, etPassword, etReenterPassword;
+    private TextView tvStatus;
+    private TextView tv_register;
+    private Button btnSubmit;
+    private String URL = "http://10.0.2.2/hccstartup/register.php";
+    private String name, t_name, email, password, reenterPassword;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        etName = findViewById(R.id.et_fullname_register);
+        et_team_name = findViewById(R.id.et_team_name_register);
+        etEmail = findViewById(R.id.et_email_register);
+        etPassword = findViewById(R.id.et_password_register);
+        etReenterPassword = findViewById(R.id.et_password_confirm_register);
+        tvStatus = findViewById(R.id.tvStatus);
+        btnSubmit = findViewById(R.id.btn_submit);
+        btnSubmit.setOnClickListener(this);
+        tv_register = findViewById(R.id.tv_already_registered);
+        name = t_name = email = password = reenterPassword = "";
 
-            full_name = (EditText) findViewById(R.id.et_fullname_register);
-            team_name = (EditText) findViewById(R.id.et_team_name_register);
-            email = (EditText) findViewById(R.id.et_email_register);
-            enter_password = (EditText) findViewById(R.id.et_password_register);
-            confirm_password = (EditText) findViewById(R.id.et_password_confirm_register);
-            submit = (Button) findViewById(R.id.btn_submit);
-            already_Registered = (TextView) findViewById(R.id.tv_already_registered);
-
-        already_Registered.setOnClickListener(v -> {
-            Intent i = new Intent(RegisterActivity.this, MainActivity.class);
-            startActivity(i);
+       /* btnSubmit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
 
         });
-
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                process_register_form();
-
-                Intent i = new Intent(RegisterActivity.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
-
-    }
-    private void process_register_form(){
-        if(!validateEmail() | !validatePassword()| !validatefullname() | !validateteamname()){
-            return;
-        }
-
-        String val_email = email.getText().toString();
-        String val_fname = full_name.getText().toString();
-        String val_tname = team_name.getText().toString();
-        String val_password = enter_password.getText().toString();
-
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_REGIST,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject respObj = new JSONObject(response);
-                            Boolean status = respObj.getBoolean("status");
-                            String msg = respObj.getString("message");
-                            if(status){
-
-                                Toast.makeText(RegisterActivity.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(RegisterActivity.this, MainActivity.class);
-                                startActivity(i);
-                            }else{
-                                Toast.makeText(RegisterActivity.this, msg, Toast.LENGTH_SHORT).show();
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(RegisterActivity.this, "Something went wrong! Try again", Toast.LENGTH_SHORT).show();
-
-
-                    }
-                }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("full_name",val_fname);
-                params.put("team_name",val_tname);
-                params.put("email",val_email);
-                params.put("password",val_password);
-
-                return params;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-
-
+*/
     }
 
-    private boolean validatefullname(){
-        String val = full_name.getText().toString();
-        if (val.isEmpty()) {
-            full_name.setError("Full name required");
-            return false;
-        } else if (val.length() >= 50) {
-            full_name.setError("Full name is too long");
-            return false;
-        } else {
-            full_name.setError(null);
-            return true;
-        }
 
-    } private boolean validateteamname(){
-        String val = team_name.getText().toString();
-        if (val.isEmpty()) {
-            team_name.setError("Team name required");
-            return false;
-        }else {
-                team_name.setError(null);
-            return true;
+    @Override
+    public void onClick(View view) {
+
+        name = etName.getText().toString().trim();
+        t_name = et_team_name.getText().toString().trim();
+        email = etEmail.getText().toString().trim();
+        password = etPassword.getText().toString().trim();
+        reenterPassword = etReenterPassword.getText().toString().trim();
+
+        Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
+        startActivity(i);
+        Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+        finish();
+
+        if(!password.equals(reenterPassword)){
+            Toast.makeText(RegisterActivity.this, "Password Mismatch", Toast.LENGTH_SHORT).show();
+        }
+        else if(!name.equals("") && !t_name.equals("") && !email.equals("") && !password.equals("")){
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+
+                    Log.i ("res", response);
+                    //Toast.makeText(RegisterActivity.this, response, Toast.LENGTH_SHORT).show();
+                    if (response.equals("success")) {
+                        tvStatus.setText("Successfully registered.");
+                        btnSubmit.setClickable(false);
+                    } else if (response.equals("failure")) {
+                        tvStatus.setText("Something went wrong!");                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.d("DEBUG","Request error");
+                    Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show();
+                }
+            }){
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> data = new HashMap<>();
+                    data.put("full_name", name);
+                    data.put("team_name", t_name);
+                    data.put("email", email);
+                    data.put("password", password);
+                    Log.d("DEBUG DATA",data.toString());
+                    return data;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+            requestQueue.add(stringRequest);
+            Log.d("DEBUG","Request attempted");
         }
     }
 
-    private boolean validateEmail(){
-        String val = email.getText().toString();
-        String email_pattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
-        if(val.isEmpty()){
-            email.setError("Email is required!");
-            return false;
-        }
-        else if(!val.matches(email_pattern)){
-            email.setError("Your email is invalid");
-            return  false;
-        }
-        else{
-            email.setError(null);
-            return  true;
-        }
-    }
-
-    private boolean validatePassword(){
-        String val = enter_password.getText().toString();
-        String val_cp = confirm_password.getText().toString();
-        String password_pattern =  "(?=.*[a-zA-Z])(?=.*[!@#$%^&*+=])(?=\\S+$)(.{4,})$";
-
-        if(val.isEmpty()){
-            enter_password.setError("Password is required!");
-            return false;
-        }
-        else if(!val.matches(password_pattern)){
-            enter_password.setError("Your Password is not strong");
-            return  false;
-        }
-        else if(!val_cp.matches(val)){
-            confirm_password.setError("Password did not match");
-            return  false;
-        }
-        else{
-            enter_password.setError(null);
-            return  true;
-        }
+    //Links Registration Page to Login Page
+    public void registered(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_whitewash"
+    android:orientation="vertical"
     tools:context=".StatusActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_application_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/agatha_font"
+        android:gravity="center"
+        android:text="Team Application Status"
+        android:textFontWeight="900"
+        android:textSize="45dp" />
+
+    <TextView
+        android:id="@+id/tv_display_status"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/display_status"
+        android:gravity="center"
+        android:hint="..Enter team name below to know whether your business idea has been approved"
+        android:textSize="25dp"
+        android:textStyle="italic"
+        />
+
+    <EditText
+        android:id="@+id/et_display_status"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/display_status"
+        android:gravity="center"
+        android:hint="..Enter team name to view status"
+        android:textSize="25dp"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/btn_retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrieve"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="10dp"
+        />
+</LinearLayout>

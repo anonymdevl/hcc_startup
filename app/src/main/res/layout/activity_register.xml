@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_portrait"
+    android:background="@drawable/background_whitewash"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".DashboardActivity">
+    tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/iv_cepe"
@@ -31,7 +31,7 @@
         android:hint="Full Name"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
 
     <EditText
         android:id="@+id/et_team_name_register"
@@ -46,7 +46,7 @@
         android:hint="Team Name"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
 
     <EditText
         android:id="@+id/et_email_register"
@@ -56,12 +56,12 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#81000E0E"
-        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
         android:drawablePadding="20dp"
         android:hint="Email"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
 
 
     <EditText
@@ -79,7 +79,7 @@
         android:inputType="textPassword"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
 
     <EditText
         android:id="@+id/et_password_confirm_register"
@@ -96,7 +96,13 @@
         android:inputType="textPassword"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/material_dynamic_neutral_variant70" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/btn_submit"
@@ -106,7 +112,7 @@
         android:layout_gravity="center"
         android:textAllCaps="true"
         android:textSize="20sp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:fontFamily="monospace"
@@ -115,15 +121,15 @@
 
     <TextView
         android:id="@+id/tv_already_registered"
-        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
+        android:onClick="registered"
         android:text="Already Registered?"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        tools:ignore="OnClick" />
 
 </LinearLayout>

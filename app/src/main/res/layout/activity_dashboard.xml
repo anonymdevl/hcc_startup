@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background_portrait"
+    android:background="@drawable/background_whitewash"
     tools:context=".DashboardActivity">
 
     <ImageView
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="Welcome to your dashboard"
         android:textSize="30dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -32,10 +32,12 @@
         android:id="@+id/btn_register_for_startup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register for Startup"
+        android:text="Apply for Startup"
         android:layout_marginTop="100dp"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="40dp"
+        tools:ignore="HardcodedText" />
     <Button
         android:id="@+id/btn_pitch_idea"
         android:layout_width="match_parent"
@@ -43,15 +45,17 @@
         android:text="Pitch Idea"
         android:layout_marginTop="10dp"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="40dp"/>
     <Button
         android:id="@+id/btn_add_team"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Team"
+        android:text="Manage Team"
         android:layout_marginTop="10dp"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="40dp"/>
     <Button
         android:id="@+id/btn_status"
         android:layout_width="match_parent"
@@ -59,5 +63,7 @@
         android:text="Application Status"
         android:layout_marginTop="10dp"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:cornerRadius="40dp"/>
+
 </LinearLayout>
